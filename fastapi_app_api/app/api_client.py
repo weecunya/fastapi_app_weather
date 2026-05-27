@@ -17,7 +17,7 @@ class APIClient:
 
                     return {
         f'{city}': {f'''{result['data_day']['time'][0]}: макс.темп.- {result['data_day']['temperature_max'][0]},
-мин.темп.- {result['data_day']['temperature_min'][0]}, вероятность осадков-{result['data_day']['precipitation_probability'][0]}%'''}}
+мин.темп.- {result['data_day']['temperature_min'][0]}, вероятность осадков-{result['data_day']['precipitation_probability'][0]}%'''.replace('\n','')}}
 
             except Exception:
                 return {'status': 'not found'}
